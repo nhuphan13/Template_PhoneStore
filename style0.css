@@ -1,0 +1,114 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    background-color: lightgray;
+}
+/*css header*/
+header > h1{
+    text-align: center;
+    color: gray;
+    text-shadow: 3px 4px lightyellow;
+    font-size: 56px;
+    animation: changecolor ease 1s infinite;
+}
+@keyframes changecolor{
+    from{
+        color: green;
+    }
+    to{
+        color: rgb(161, 14, 14);
+    }
+}
+/* css body*/
+section.cars{
+    display: flex;
+}
+div.car{
+    width: 25%;
+    background-color: gray;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 1%;
+}
+div.car > img{
+    width: 100%;
+    transition: transform .5s
+}
+div.car > img:hover{
+    transform: rotate(-20deg);
+}
+/*css nav*/
+nav {
+    background-color: lightblue;   
+}
+nav  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav  ul > li > a{
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    border-right: 0.3px solid black; 
+}
+nav > ul > li > a:hover{
+    background-color: blue;
+    color: white;
+    text-decoration: underline;
+}
+/*css footer*/
+footer{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+footer h1, footer p{
+    text-align: center;
+}
+div.foot{  
+    display: flex;
+}
+footer ul{
+    list-style-type: none;
+}
+.col25{
+    width: 25%;
+}
+.col50{
+    width: 50%;
+}
+/*css table*/
+table.msg{
+    width: 100%;
+}
+input[type=text]{
+    width: 90%;
+    padding: 10px;
+}
+textarea{
+    width: 95%;
+    padding: 10px;
+    height: 50px;
+}
+input[type=submit]{
+    background-color: orange;
+    color: palegoldenrod;
+    padding: 15px solid orange;
+    border: 1px solid orange;
+}
+table.msg tr:last-child{
+    text-align: center;
+}
+.subcontent{
+    display: none;
+    width: 100px;
+    background-color: lightblue;
+     position: absolute;
+}
+.submenu:hover .subcontent{
+    display: block;
+}
