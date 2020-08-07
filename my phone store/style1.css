@@ -4,7 +4,7 @@
 
 h1{
     text-align: center;
-    padding: 25px;
+    padding: -23px;
     font-size: 50px;
     text-shadow: 4px 4px lightblue;
     animation: doimau ease 4s infinite;
@@ -102,6 +102,7 @@ div.info > div > img{
 /*css footer*/
 footer > ul{
     background-image: url(bg_footer.jpg);
+    padding: 10px;
     background-repeat: no-repeat;
     background-position: right;
     background-color: #0a6fa3;
