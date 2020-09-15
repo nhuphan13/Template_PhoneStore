@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <link href="baitaplon.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>THẾ GIỚI DI ĐỘNG</h1>
+        <nav>
+            <ul>
+                <li class="btn" id="home"><a href="#"><i class="fa fa-home"></i> Trang chủ</a></li>
+                <li class="dropdown">
+                    <div class="btn">
+                        <a href="#" id="Phone"><i class="fa fa-mobile"></i> Điện thoại</a></div>
+                    <div class="dropdown-content" id="Phone-type" style="display: none;">
+                        <a href="#iphone">IPHONE</a>
+                        <a href="#samsung">SAMSUNG</a>
+                        <a href="#oppo">OPPO</a>
+                        <a href="#huawei">HUAWEI</a>
+                    </div>
+                </li>
+                <li class="btn"><a href="#Tablet"><i class="fa fa-tablet"></i> Tablet</a></li>
+                <li class="dropdown">
+                    <div class="btn">
+                        <a href="#" id="Lap"><i class="fa fa-laptop"></i> Laptop</a></div>
+                    <div class="dropdown-content" id="Lap-type" style="display: none;">
+                        <a href="#asus">ASUS</a>
+                        <a href="#hp">HP</a>
+                        <a href="#dell">DELL</a>
+                        <a href="#acer">ACER</a>
+                    </div>
+                </li>
+                <li class="btn"><a href="#Part"><i class="fa fa-headphones"></i> Phụ kiện</a></li>
+                <li class="btn"><a href="#Contact"><i class="fa fa-phone"></i> Liên hệ</a></li>
+                <li class="btn" id="search"><a href="#"><i class="fa fa-search"></i> Tìm kiếm</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--search_btn-->
+    <form class="search">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $('#search').click(function(){
+            $('form.search').show();
+            });
+        });
+    </script>
+    <!--go on top-->
+    <a class="on_top" href="#"><i class="fa fa-arrow-up"></i></a>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 300) {
+                    $('a.on_top').fadeIn();
+                } else {
+                    $('a.on_top').fadeOut();
+                }
+            });
+            $('a.on_top').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 900);
+                return false;
+            });
+        });
+    </script>
+    <!--home-->
+    <script>
+        $(document).ready(function(){
+            $('#home').click(function(){
+            $('#Phone-info').hide();
+            $('#Laptop-info').hide();
+            $('#Phone-type').hide();
+            $('#Lap-type').hide();
+            $('#Details').hide();
+            $('#Product').show();
+            $('#myCarousel').show();
+            });
+        });
+    </script>
+    <!--phone-info-->
+     <script>
+        $(document).ready(function(){
+            $('#Phone').click(function(){
+            $('#Phone-info').show();
+            $('#Phone-type').show();
+            $('#myCarousel').show();
+            $('#Product').hide();
+            $('#Laptop-info').hide();
+            $('#Details').hide();
+            
+            });
+        });
+    </script>
+    <!--laptop-info-->
+    <script>
+        $(document).ready(function(){
+            $('#Lap').click(function(){
+            $('#Laptop-info').show();
+            $('#Lap-type').show();
+            $('#myCarousel').show();
+            $('#Product').hide();
+            $('#Phone-info').hide();
+            $('#Details').hide();
+            });
+        });
+    </script>
+    <!--deatails-->
+    <script>
+        $(document).ready(function(){
+            $('#note-20').click(function(){
+            $('#Phone-info').hide();
+            $('#Laptop-info').hide();
+            $('#Phone-type').hide();
+            $('#Lap-type').hide();
+            $('#Product').hide();
+            $('#myCarousel').hide();
+            $('#Details').show();
+
+            });
+        });
+    </script>
+    <section>
+        <!--carousel-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+            <div class="item active">
+                <img src="/images/header/800-300-800x300-11.png" alt="header-img" style="width:100%;">
+            </div>
+            <div class="item">
+                <img src="/images/header/800-300-800x300-5.png" alt="header-img" style="width:100%;">
+            </div>
+            <div class="item">
+                <img src="/images/header/phu-kien-bts-800-300-800x300.png" alt="header-img" style="width:100%;">
+            </div>
+            <div class="item">
+                <img src="/images/header/reno4-chung-800-300-800x300.png" alt="header-img" style="width:100%;">
+            </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div  id="Product">
+            <section>
+                <div class="product">
+                    <div>
+                        <h2><i class="fa fa-mobile" id="Phone"></i> Điện thoại</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="products">
+                        <div class="info">
+                            <img src="/images/điện thoại/xiaomi-redmi-9png.png" alt="phone3"/>
+                            <div>
+                                <h3>Xiaomi Redmi 9</h3>
+                                <h4>3.790.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/điện thoại/samsung-galaxy-a21s-055620-045627-400x460.png" alt="phone4"/>
+                            <div>
+                                <h3>Samsung Galaxy A21s</h3>
+                                <h4>C4.990.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/điện thoại/realme-c3.png" alt="phone5"/>
+                            <div>
+                                <h3>Realme C3</h3>
+                                <h4>3.390.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/điện thoại/vsmart-live-4-242920-072956-400x460.png" alt="phone6"/>
+                            <div>
+                                <h3>Vsmart Live 4</h3>
+                                <h4>4.090.000 VND</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="product">
+                    <div>
+                        <h2><i class="fa fa-tablet"></i> Tablet</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="products">
+                        <div class="info">
+                            <img src="/images/ipad/ipad-mini-79-inch-wifi-cellular-64gb-2019-1-400x460.png" alt="tablet1"/>
+                            <div>
+                                <h3>iPad Mini 7.9 inch Wifi Cellular </h3>
+                                <h4>13.990.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/ipad/samsung-galaxy-tab-s6-400x460.png" alt="tablet2"/>
+                            <div>
+                                <h3>Samsung Galaxy Tab S6</h3>
+                                <h4>16.990.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/ipad/lenovo-tab-e10-tb-x104l-den-400x460.png" alt="tablet3"/>
+                            <div>
+                                <h3>Lenovo Tab E10 TB-X104L</h3>
+                                <h4>3.190.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/ipad/samsung-galaxy-tab-s7-115720-085707-400x460.png" alt="tablet4"/>
+                            <div>
+                                <h3>Samsung Galaxy Tab S7</h3>
+                                <h4>16.990.000 VND</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="product">
+                    <div>
+                        <h2><i class="fa fa-laptop" ></i> Laptop</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="products">
+                        <div class="info">
+                            <img src="/images/Laptop/lenovo-ideapad-3-15iil05-i5-81we003qvn-222649-2-600x600 (1).jpg" alt="laptop1"/>
+                            <div>
+                                <h3>Lenovo IdeaPad Slim 3 15IIL05 i5 1035G4/8GB/512GB/Win10</h3>
+                                <h4>13.900.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images//Laptop/lenovo-ideapad-s145-81w8001xvn-a4-216292-600x600.jpg" alt="laptop2"/>
+                            <div>
+                                <h3>Lenovo IdeaPad S145 15IIL i3 1005G1/4GB/256GB/Win10</h3>
+                                <h4>9.890.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/Laptop/acer-aspire-3-a315-nx-heesv-00d-221251-1-600x600.jpg" alt="laptop3"/>
+                            <div>
+                                <h3>Acer Aspire 3 A315 54K 37B0 i3 8130U/4GB/256GB/Win10</h3>
+                                <h4>9.890.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/Laptop/acer-aspire-3-a315-n5030-nxhe3sv00h-015120-045127-600x600.jpg" alt="laptop4"/>
+                            <div>
+                                <h3>Acer Aspire 3 A315 34 P26U N5030/4GB/256GB/Win10</h3>
+                                <h4>7.490.000 VND</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="product">
+                    <div>
+                        <h2><i class="fa fa-headphones" ></i> Phụ kiện</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="products">
+                        <div class="info">
+                            <img src="/images/phụ kiện/tai-nghe-bluetooth-true-wireless-sony-wf-sp800n-041220-101215-600x600.jpg" alt="part1"/>
+                            <div>
+                                <h3>Tai nghe Bluetooth True Wireless Sony</h3>
+                                <h4>4.790.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/phụ kiện/loa-bluetooth-sony-srs-xb33-av-600x600-1-600x600.jpg" alt="part2"/>
+                            <div>
+                                <h3>Loa bluetooth Sony</h3>
+                                <h4>3.690.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/phụ kiện/loa-bluetooth-harman-kardon-soundsticks-4-trang-ava-1-600x600.jpg" alt="part3"/>
+                            <div>
+                                <h3>Loa Bluetooth Harman Kardon SoundSticks</h3>
+                                <h4>7.990.000 VND</h4>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <img src="/images/phụ kiện/tai-nghe-bluetooth-airpods-pro-apple-mwp22-ava-600x600.jpg" alt="part4"/>
+                            <div>
+                                <h3>Tai nghe AirPods Pro Apple MWP22</h3>
+                                <h4>6.990.000 VND</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section id="Laptop-info" style="display: none;">
+        <section>
+            <div id="asus">
+                <h2><i class="fa fa-laptop"></i> ASUS</h2>
+                <div class="line"></div>
+            </div>
+            <div class="products">
+                <div class="info">
+                    <img src="/images/Laptop/asus-vivobook-x409ja-i5-ek052t-220976-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus vivobook X409JA i5 EK052T</h3>
+                        <H4>15.500.000 VND</H4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/asus-vivobook-x509ja-i3-ej480t-225608-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus vivobook X509JA i3 EJ480T</h3>
+                        <h4>10.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/asus-vivobook-x509jp-i5-ej023t-2gb-221617-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus vivobook X509JP i5 EJ023T</h3>
+                        <h4>17.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/asus-vivobook-x509ma-n4020-br271t-034520-104519-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus vivobook X509MA N4020</h3>
+                        <h4>6.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/asus-x409ja-i3-ek015t-220526-2-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus X409JA i3 EK015T</h3>
+                        <h4>11.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/asus-gaming-rog-strix-g512-i5-ial031t-225940-225940-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus Gaming Rog Strix G512 i5</h3>
+                        <h4>28.990.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/asus-gaming-rog-strix-g512-i7-ial001t-272120-022128-225687-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus Gaming Rog Strix G512 i7</h3>
+                        <h4>11.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/asus-vivobook-gaming-f571gt-i7-al858t-226256-600x600.jpg" alt="Asus">
+                    <div>
+                        <h3>Asus VivoBook Gaming F571GT i7</h3>
+                        <h4>24.490.000 VND</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="hp">
+                <h2><i class="fa fa-laptop"></i> HP</h2>
+                <div class="line"></div>
+            </div>
+            <div class="products">
+                <div class="info">
+                    <img src="/images/Laptop/hp-15s-du2050tx-i3-1m8w2pa-usb-224065-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP 15s DU2050TX i3</h3>
+                        <h4>12.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/hp-348-g7-i3-1a0z1pa-1-225549-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP 348 G7 i3 1A0ZPA</h3>
+                        <h4>1.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/hp-348-g7-i3-9pg83pa-030020-110045-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP 348 G7 i3 9PG8D</h3>
+                        <h4>12.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/hp-348-g7-i5-9ph06pa-kg2-1-218439-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP 348 G7 i5 9PH0PA</h3>
+                        <h4>12.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/hp-pavilion-15-cs3012tu-i5-1035g1-8gb-512gb-win10-15-216087-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP Pavilion 15 cs3012TU</h3>
+                        <h4>16.900.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/hp-envy-13-ba0046tu-i5-171m7pa-225859-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP Envy 13 ba0046TU i5</h3>
+                        <h4>22.990.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/hp-15s-fq0004tu-n5000-1a0d5pa-224010-1-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP 15s fq0004TU</h3>
+                        <h4>8.890.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/hp-pavilion-x360-dh0103tu-i3-8145u-4gb-1tb-touch-w-20-204049-600x600.jpg" alt="Hp">
+                    <div>
+                        <h3>HP Pavilion x360 dh0103TU i3</h3>
+                        <h4>10.630.000 VND</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="dell">
+                <h2><i class="fa fa-laptop"></i> Dell</h2>
+                <div class="line"></div>
+            </div>
+            <div class="products">
+                <div class="info">
+                    <img src="/images/Laptop/dell-inspiron-3493-i5-n4i5122w-222088-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell inspiron 3493 i5 N4i5122W</h3>
+                        <h4>15.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/dell-inspiron-5490-i5-fmkjv1-224320-054321-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell inspiron 5490 i5 M4i5122W</h3>
+                        <h4>16.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/dell-inspiron-5593-i5-1035g1-8gb-256gb-2gb-mx230-w-213570-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell inspiron 5593 i5 H4i5122W</h3>
+                        <H4>18.500.000 VND</H4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/dell-inspiron-5593-i5-7wgnv1-213535-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell inspiron 5593 i5 H4i5322W</h3>
+                        <h4>17.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/dell-vostro-5490-i5-10210u-8gb-256gb-win10-v4i510-9-213861-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell Vostro 5490 i5 1021UT</h3>
+                        <h4>20.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/dell-vostro-3580-i5-8265u-4gb-1tb-2gb-amd520-win10-15-209423-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell Vostro 3580 i5</h3>
+                        <h4>14.190.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/dell-vostro-5581-i5-8265u-4gb-1tb-office365-win10-1-2-203138-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell Vostro 5581 i5</h3>
+                        <h4>15.490.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/dell-vostro-3578-ngmpf11-450x300-600x600-166602-600x600.jpg" alt="Dell">
+                    <div>
+                        <h3>Dell Vostro 3578 i7</h3>
+                        <h4>17.790.000 VND</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="acer">
+                <h2><i class="fa fa-laptop"></i> ACER</h2>
+                <div class="line"></div>
+            </div>
+            <div class="products">
+                <div class="info">
+                    <img src="/images/Laptop/acer-aspire-a514-53g-513j-i5-nxhywsv001-223658-1-600x600.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer aspire A514 i5 </h3>
+                        <h4>15.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/acer-aspire-a515-53-5112-i5-8265u-4gb-16gb-1tb-win-198790-600x600.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer aspire a515 i5 8265U</h3>
+                        <h4>12.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/acer-swift-3-sf314-nx-hjfsv-0018-217351-600x600.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer Swift 3 SF314</h3>
+                        <h4>13.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/acer-swift-sf315-52-38yq-i3-8130u-4gb-1tb-156f-win-21-208863-600x600.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer Swift SF315</h3>
+                        <h4>18.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/acer-swift-sf315-52-50t9-i5-8250u-8gb-256gb-win10-200203-600x600.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer Swift SF316</h3>
+                        <h4>17.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/acer-nitro-an515-43-r5-nhq6zsv003.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer Nitro AN515 43</h3>
+                        <h4>17.540.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/acer-aspire-3-a315-56-i5-nxhs5sv00b.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer Aspire 3 A315 56</h3>
+                        <h4>14.390.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/Laptop/acer-nitro-5-an515-55-58a7-i5-nhq7rsv002.jpg" alt="Acer">
+                    <div>
+                        <h3>Acer Nitro 5 AN515 55 58A7 i5</h3>
+                        <h4>20.960.000 VND</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="Phone-info" style="display: none;">
+        <section>
+            <div id="samsung">
+                <h2><i class="fa fa-mobile"></i> SAMSUNG</h2>
+                <div class="line"></div>
+            </div>
+            <div class="products">
+                <div class="info" id="note-20">
+                    <img src="/images/điện thoại/samsung-galaxy-note-20-062220-122200-600x600.jpg" alt="Samsung">
+                    <div>
+                        <h3>Samsung Galaxy Note 20</h3>
+                        <h4>32.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/samsung-galaxy-s20-ultra-600x600-1-600x600.jpg" alt="Samsung">
+                    <div>
+                        <h3>Samsung Galaxy Ultra</h3>
+                        <h4>19.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/samsung-galaxy-note-10-plus-171220-101247-600x600.jpg" alt="Samsung">
+                    <div>
+                        <h3>Samsung Galaxy Note 10+</h3>
+                        <h4>16.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/samsung-galaxy-note-20-ultra-5g-063420-123447-600x600.jpg" alt="Samsung">
+                    <div>
+                        <h3>Samsung Note 20 Ultra 5G </h3>
+                        <h4>25.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/samsung-galaxy-s20-600x600-hong-600x600.jpg" alt="Samsung">
+                    <div>
+                        <h3>Samsung Galaxy S20</h3>
+                        <h4>21.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/samsung-galaxy-z-flip-den-600x600-600x600.jpg" alt="Samsung">
+                    <div>
+                        <h3>Samsung Galaxy Z Flip</h3>
+                        <h4>36.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/samsung-galaxy-s20-600x600-hong-600x600.jpg" alt="Samsung">
+                    <div>
+                        <h3>Samsung Galaxy S20+</h3>
+                        <h4>16.990.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/samsung-galaxy-note-10-plus-den-400x460-400x460.png" alt="Samsung">
+                    <div>
+                        <h3>Samsung Galaxy Note 10+</h3>
+                        <h4>17.990.000 VND</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="iphone"> 
+                <h2><i class="fa fa-mobile"></i> IPHONE</h2>
+                <div class="line"></div>
+            </div>
+            <div class="products">
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-xs-gold-400x460-1-400x460.png" alt="iPhone">
+                    <div>
+                        <h3>iPhone Xs 64GB</h3>
+                        <h4>19.990.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-11-pro-max-(23).jpg" alt="iPhone">
+                    <div>
+                        <h3>iPhone 11 Pro Max 64GB</h3>
+                        <h4>30.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-11-pro-max-256gb-black-400x400.jpg" alt="iPhone">
+                    <div>
+                        <h3>iPhone 11 Pro Max 256GB</h3>
+                        <h4>34.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-7-plus-128gb-hh-600x600.jpg" alt="iPhone">
+                    <div>
+                        <h3>iPhone 7 Plus 128GB</h3>
+                        <h4>12.490.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-se-256gb-2020-261920-101916-200x200.jpg" alt="iPhone">
+                    <div>
+                        <h3>iPhone SE 256GB</h3>
+                        <h4>17.000.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-7-plus-32gb-gold-600x600-600x600.jpg" alt="iPhone">
+                    <div>
+                        <h3>iPhone 7 Plus 32GB</h3>
+                        <h4>11.490.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-se-2020-red-600x600-2-200x200.jpg" alt="iPhone">
+                    <div>
+                        <h3>iPhone SE 64GB</h3>
+                        <h4>12.990.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/iphone-se-128gb-2020-261820-101803-200x200.jpg" alt="iPhone">
+                    <div>
+                        <h3>iPhone SE 128GB</h3>
+                        <h4>14.490.000 VND</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="oppo">
+                <h2><i class="fa fa-mobile"></i> OPPO</h2>
+                <div class="line"></div>
+            </div>
+        <div class="products">
+            <div class="info">
+                <img src="/images/điện thoại/oppo-a53-2020-blue-600x600-600x600.jpg" alt="Oppo">
+                <div>
+                    <h3>Oppo a53 2020</h3>
+                    <h4>4.500.000 VND</h4>
+                </div>
+            </div>
+            <div class="info">
+                <img src="/images/điện thoại/oppo-a92-tim-600x600-1-2-600x600.jpg" alt="Oppo">
+                <div>
+                    <h3>Oppo a92</h3>
+                    <h4>6.700.000 VND</h4>
+                </div>
+            </div>
+            <div class="info">
+                <img src="/images/điện thoại/oppo-find-x2-blue-600x600-600x600 .jpg" alt="Oppo">
+                <div>
+                    <h3>Oppo Fine X2</h3>
+                    <h4>20.000.000 VND</h4>
+                </div>
+            </div>
+            <div class="info">
+                <img src="/images/điện thoại/oppo-reno2-f-600x600-200x200.jpg" alt="Oppo">
+                <div>
+                    <h3>OPPO Reno2 F</h3>
+                    <h4>6.490.000 VND</h4>
+                </div>
+            </div>
+            <div class="info">
+                <img src="/images/điện thoại/oppo-reno4-275620-035629-600x600.jpg" alt="Oppo">
+                <div>
+                    <h3>Oppo Reno 4</h3>
+                    <h4>8.000.000 VND</h4>
+                </div>
+            </div>
+            <div class="info">
+                <img src="/images/điện thoại/oppo-reno3-pro-den-600x600-200x200.jpg" alt="Oppo">
+                <div>
+                    <h3>OPPO Reno3 Pro</h3>
+                    <h4>10.590.000 VND</h4>
+                </div>
+            </div>
+            <div class="info">
+                <img src="/images/điện thoại/oppo-reno4-pro-274720-034747-600x600.jpg" alt="Oppo">
+                <div>
+                    <h3>OPPO Reno4 Pro</h3>
+                    <h4>11.990.000 VND</h4>
+                </div>
+            </div>
+            <div class="info">
+                <img src="/images/điện thoại/oppo-a1k-do-600x600-1-600x600.jpg" alt="Oppo">
+                <div>
+                    <h3>OPPO A1K</h3>
+                    <h4>2.690.000 VND</h4>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="huawei">
+                <h2><i class="fa fa-mobile"></i> HUAWEI</h2>
+                <div class="line"></div>
+            </div>
+            <div class="products">
+                <div class="info">
+                    <img src="/images/điện thoại/huawei-nova-5t-blue-600x600-600x600.jpg" alt="Huawei">
+                    <div>
+                        <h3>Huawei Nova 5T</h3>
+                        <h4>8.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/huawei-nova-7i-pink-600x600-600x600.jpg" alt="Huawei">
+                    <div>
+                        <h3>Huawei Nava 7i</h3>
+                        <h4>5.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/huawei-p40-600x600-2-200x200.jpg" alt="Huawei">
+                    <div>
+                        <h3>Huawei P40</h3>
+                        <h4>15.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/huawei-y6p-xanh-600x600-200x200.jpg" alt="Huawei">
+                    <div>
+                        <h3>Huawei Y6P</h3>
+                        <h4>3.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/huawei-p30-lite-1-600x600.jpg" alt="Huawei">
+                    <div>
+                        <h3>Huawei P30 Lite</h3>
+                        <h4>5.500.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/huawei-y9sb-blue-600x600.jpg" alt="Huawei">
+                    <div>
+                        <h3>Huawei Y9s</h3>
+                        <h4>5.800.000 VND</h4>
+                    </div>
+                </div>
+                <div class="info">
+                    <img src="/images/điện thoại/huawei-p40-pro-600x600-3-600x600.jpg" alt="Huawei">
+                    <div>
+                        <h3>Huawei P40 Pro</h3>
+                        <h4>21.990.000₫</h4>
+                    </div>
+                </div>
+        </section>
+    </section>
+    <section id="Details" style="display: none;">
+        <section>
+            <div class="name">
+                <div>
+                    <h1 style="text-align: center;">Điện Thoại Samsung Galaxy Note 20<br>
+                    GIÁ: 32.000.000₫</h1>
+                </div>
+                <div>
+                    <img src="/images/details/-samsung-galaxy-note-20-tinh-nang-noi-bat.jpg" alt="Galaxy-note20" style="width: 100%;">
+                </div>
+                <div>
+                    <p>Tháng 8/2020, Samsung Galaxy Note 20 chính thức được lên kệ, với thiết kế camera trước nốt ruồi quen thuộc, cụm camera hình chữ nhật mới lạ cùng với việc sử dụng vi xử lý Exynos 990 cao cấp của chính Samsung chắc hẳn sẽ mang lại một trải nghiệm thú vị cùng hiệu năng mạnh mẽ.
+                    Camera cụm hình chữ nhật độc đáo cùng thiết kế mạnh mẽ
+                    Điện thoại sở hữu thiết kế khung kim loại chắc chắn, mặt lưng nhựa bóng bẩy, kiểu dáng mạnh mẽ với những góc cạnh vuông vức nhưng vẫn mang lại cảm giác cầm nắm thoải mái.</p>
+                    <img src="/images/details/1-samsung-galaxy-note-20-235720-125702.jpg" alt="Galaxy-note20" style="width: 100%;">
+                    <p>Camera của Galaxy Note 20 được thiết kế trong cụm hình chữ nhật được đặt gọn ở phía sau bao gồm 1 camera chính 64 MP, camera góc siêu rộng 12 MP và camera tele 12 MP hỗ trợ người dùng dễ dàng lưu lại sắc nét những khoảng khắc đáng nhớ cùng gia đình và bạn bè. 
+                    Camera Galaxy Note 20 hỗ trợ zoom đến 30x ở chế độ chụp bình thường, trong khi đó, ở chế độ chụp ban đêm, máy vẫn hỗ trợ zoom đến 10x, chi tiết trong điều kiện thiếu sáng nhiều nhưng vẫn cho chất lượng hình tốt và chi tiết.
+                    Với khả năng quay video chất lượng cao lên đến 8K siêu nét cùng các tính năng chống rung, lấy nét,... thì việc sở hữu nhiều thước phim xịn mịn bắt mắt là điều hoàn toàn dễ dàng trên chiếc smartphone này.</p>
+                    <img src="/images/details/2-galaxy-note20.jpg" alt="Galaxy-note20" style="width: 100%;">
+                    <p> Bút S Pen nhiều tiện ích, được nâng cấp nhiều tính năng hơn
+                    S Pen được xem là linh hồn của dòng Galaxy Note, siêu tiện lợi hỗ trợ ghi chú nhanh và đa tác vụ thông minh trên điện thoại như chụp ảnh màn hình, chụp cắt không gian bất kỳ trên màn hình, tạo ghi chú, phóng to / thu nhỏ hay hỗ trợ cử chỉ thông minh từ xa,...
+                    Bên cạnh đó, ở Note 20, bút S Pen còn được cải tiến cho độ trễ giảm thiểu đáng kể cùng các cử chỉ điều khiển từ xa thông minh và tiện ích.</p>
+                    <img src="/images/details/3-samsung-galaxy-note-20-125720-105754.jpg" alt="Galaxy-note20" style="width: 100%;">
+                    <p>Dung lượng pin lớn, thoải mái sử dụn
+                    Note 20 sở hữu cho mình viên pin dung lượng 4300 mAh, tăng thời lượng sử dụng lên tới 23% so với thế hệ Note 10 trước.
+                    Bên cạnh đó sản phẩm còn hỗ trợ sạc pin nhanh, với khả năng sạc nhanh 25w từ 0 đến 50% chỉ trong vòng 30 phút, giúp bạn rút ngắn được đáng kể thời gian chờ sạc cho thiết bị.</p>
+                    <img src="/images/details/4-galaxy-note20.jpg" alt="Galaxy-note20" style="width: 100%;">
+                </div>
+            </div>
+        </section> 
+        <section>
+            <div class="detail">
+                <section class="promotion" >
+                    <table>
+                        <tr>
+                            <td><h1>KHUYẾN MÃI TRỊ GIÁ 2.000.000₫</h1></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Giảm giá 2,000,000đ qua quà tặng Galaxy <a href="Xemchitiet"> Xem chi tiết</a> </li>
+                                    <li>Đặc quyền ưu đãi nâng cấp đến 4 triệu <a href="Xemchitiet">Xem chi tiết</a> </li>
+                                    <li>Trả góp 0% thẻ tín dụng Xem chi tiết</li>
+                                    <li>Tặng suất mua Đồng hồ Samsung Active 2 giảm đến 35%, Watch 3 giảm 25% <a href="Xemchitiet">Xem chi tiết</a></li>
+                                    <li>Tặng 2 suất mua Đồng hồ thời trang giảm 40% <a href="Xemchitiet">Xem chi tiết</a></li>
+                                    <li>Phụ kiện mua kèm giảm 20% </li>
+                                    <li>Lên đời siêu phẩm Note 20 Series, tài trợ đổi mới 5,000,000đ <a href="Xemchitiet">Xem chi tiết</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <ul>
+                                <li>Bộ sản phẩm gồm: Sạc, Tai nghe, Sách hướng dẫn, Hộp, Cáp, Cây lấy sim, Bút cảm ứng</li>
+                                <li>Bảo hành chính hãng 12 tháng.</li>
+                                <li>Lỗi là đổi mới trong 1 tháng tại hơn 2076 siêu thị toàn quốc</li>
+                            </ul>
+                            </td> 
+                        </tr>
+                    </table>
+                </section>
+                <section class="promotion">
+                    <table>
+                        <tr>
+                           <td colspan="2"><h1>Thông số kĩ thuật</h1></td> 
+                        </tr>
+                        <tr>
+                            <td>Màn hình</td>
+                            <td>Super AMOLED Plus, 6.7", Full HD+</td>
+                        </tr>
+                        <tr>
+                            <td>Hệ điều hành</td>
+                            <td>Android 10</td>
+                        </tr>
+
+                        <tr>
+                            <td>Camera sau</td>
+                            <td>Chính 12 MP & Phụ 64 MP, 12 MP</td>
+                        </tr>
+                        <tr>
+                            <td>Camera trước</td>
+                            <td>10 MP</td>
+                        </tr>
+                        <tr>
+                            <td>CPU</td>
+                            <td>Exynos 990 8 nhân</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>8GB</td>
+                        </tr>
+                        <tr>
+                            <td>Bộ nhớ trong</td>
+                            <td>256GB</td>
+                        </tr>
+                        <tr>
+                            <td>Thẻ sim</td>
+                            <td>2 Nano SIM HOẶC 1 Nano SIM + 1 eSIM, Hỗ trợ 4G</td>
+                        </tr>
+                        <tr>
+                            <td>Dung lượng pin</td>
+                            <td>4300 mAh, có sạc nhanh</td>
+                        </tr>
+                    </table>
+                    <button id="hndbtn" onclick="handler ()">MUA NGAY</button>  
+                </section>
+            </div>
+            
+                <script>
+                    function handler(){
+                        console.log ("Da bam mua hang")
+                    }
+                </script>
+            <hr/>
+        </section>
+        <section class="compare">
+            <div>
+                <div>
+                    <h2>Các sản phẩm tương tự</h2>
+                    <div class="line"></div>
+                </div>
+                <div  class="products">
+                    <div class="info">
+                        <img src="/images/details/oppo-find-x2-blue-600x600-400x400.jpg" alt="Oppo">
+                        <h3>OPPO Find X2</h3>
+                        <strong>19.990.000₫</strong>
+                        <p>Màn hình 6.78"</p>
+                        <p>Camera sau Chính 48 MP & Phụ 13 MP, 12 MP</p>
+                        <p>Pin 4200 mAh</p>
+                    </div>
+                    <div class="info">
+                        <img src="/images/details/samsung-galaxy-s20-ultra-600x600-1-400x400.jpg" alt="Galaxy-s20">
+                        <h3>Samsung Galaxy S20</h3>
+                        <strong>22.990.000₫</strong>
+                        <p>Màn hình 6.78"</p>
+                        <p>Camera sau Chính 48 MP & Phụ 48 MP, 8 MP, 5 MP</p>
+                        <p>Pin 4510 mAh</p>
+                    </div>
+                    <div class="info">
+                        <img src="/images/details/huawei-p40-pro-600x600-3-400x400.jpg" alt="oneplus">
+                        <h3>Huawei P40 Pro</h3>
+                        <strong>21.990.000₫</strong>
+                        <p>Màn hình 6.58"</p>
+                        <p>Camera sau Chính 50 MP & Phụ 40 MP,12 MP, TOF 3D</p>
+                        <p>Pin 4200 mAh</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <div id="Contact">`
+            <h1>LIÊN HỆ</h1>
+            <hr width="5%">
+            <p>Nếu bạn có câu hỏi vui lòng liên hệ chúng tôi...</p>
+        </div>
+        <div class="foot">
+            <div class="col25">
+                <ul>
+                    <h4>Địa chỉ doanh nghiệp</h4>
+                    <li>175 Nguyễn Kiệm, Gò Vấp</li>
+                    <li><i class="fa fa-phone"></i>Phone: 0933571716</li>
+                    <li><i class="fa fa-envelope"></i>Email:<a href="mailto:1851050108nhu@gmail.com"> 1851050108nhu@ou.edu.vn </a></li>
+                    <li><i class="fa fa-envelope"></i>Email:<a href="mailto:1851050151nhu@gmail.com"> 1851050108trang@ou.edu.vn </a></li>
+                </ul>
+            </div>
+            <div class="col25">
+                <ul>
+                    <h4>Giờ làm việc</h4>
+                    <li><i class="fa fa-camera"></i>Ngày thường:...</li>
+                    <li><i class="fa fa-camera"></i>Thứ bảy:...</li>
+                    <li><i class="fa fa-camera"></i>Chủ nhật:...</li>
+                </ul>
+            </div>
+            <div class="col50">
+                <div>
+                    <table class="msg">
+                        <tr>
+                            <td><input type="text" placeholder="Your name"></td>
+                            <td><input type="text" placeholder="Your mail"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-bottom: -10px;">
+                                <textarea placeholder="Your message"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Send message">
+                </div>
+            </div>
+        </div>
+    </footer>  
+</body>
+</html>
